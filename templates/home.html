@@ -1,8 +1,65 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>PitchPerfect | Home</title>
+
+<!--<link rel="shortcut icon" href="/graphics/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/graphics/favicon.ico" type="image/x-icon">-->
+
+<!-- Latest compiled and minified CSS -->
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../css/animate.css">
+<link rel="stylesheet" href="../css/animate.min.css">
+
+<link rel="stylesheet" href="../css/home.css">
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Oswald:400,300' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="../js/functions.js"></script>
+<script src="../js/smooth-scroll.js"></script>
+
+<script>
+	smoothScroll.init({
+	    speed: 1000, // Integer. How fast to complete the scroll in milliseconds
+	    easing: 'easeInOutCubic', // Easing pattern to use
+	    updateURL: true, // Boolean. Whether or not to update the URL with the anchor hash on scroll
+	    offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
+	    callbackBefore: function ( toggle, anchor ) {}, // Function to run before scrolling
+	    callbackAfter: function ( toggle, anchor ) {} // Function to run after scrolling
+	});
+</script>
+
+</head>
+
 <body>
-	<h1> KIRAN dude we ARE GOING TO DO THINGS</h1>
-	<p>We hope to create a music app that will do things.</p>
+
+<div id="container">
+	<div class="splash">
+		<div class="text">PITCH<br>PERFECT</div>
+		<div class="text2">tune yourself in realtime</div>
+		<div class="text3"><a data-scroll href="#toolbar"><img src="../graphics/down.png" id="down" onMouseover="bounce()">try it out now</a></div>
+		<img src="../graphics/splash.png" id="splash">
+	</div>
+
+	<div id="description">
+		DESCRIPTION SECTION LULZ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum  
+	</div>
+
+	<div id="toolbar">
+		<img src="../graphics/record.png" onclick="toggleLiveInput()">
+		<img src="../graphics/stop.png">
+		<img src="../graphics/play.png">
+	</div>
+
+	<div id="graph">
+		graph
+	</div>
+
+</div><!--container-->
 
 </body>
 </html>
