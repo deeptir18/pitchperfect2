@@ -1,3 +1,5 @@
+var isRecording = false;
+
 
 // Bounce sets the behavior of the arrow in the splash section
 function bounce() {
@@ -12,13 +14,22 @@ function removeBounce() {
 
 // Begins recording audio
 function recordStart() {
-	changeButtons("record");
-	toggleLiveInput();
+	if (!isRecording) {
+		changeButtons("record");
+		toggleLiveInput();
+		isRecording = true;
+	} else {
+		stopRecord();
+	}
 }
 
 // Stops recording
 function stopRecord() {
-	changeButtons("stop");
+	if (isRecording) {
+		changeButtons("stop");
+		stopInput();	
+		isRecording = false;	
+	}
 }
 
 // Playback audio

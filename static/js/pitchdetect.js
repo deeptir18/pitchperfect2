@@ -1,6 +1,7 @@
 /*
 The MIT License (MIT)
 
+
 Copyright (c) 2014 Chris Wilson
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -117,6 +118,16 @@ function gotStream(stream) {
     analyser.fftSize = 2048;
     mediaStreamSource.connect( analyser );
     updatePitch();
+}
+
+function stopInput() {
+	sourceNode.stop( 0 );
+	        sourceNode = null;
+	        analyser = null;
+	        isPlaying = false;
+			if (!window.cancelAnimationFrame)
+				window.cancelAnimationFrame = window.webkitCancelAnimationFrame;
+	window.cancelAnimationFrame( rafID );
 }
 
 function toggleLiveInput() {
