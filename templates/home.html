@@ -19,6 +19,7 @@
 <link rel="stylesheet" href="/static/css/home.css">
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Oswald:400,300' rel='stylesheet' type='text/css'>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/static/js/pitchdetect.js"></script>
 <script src="/static/js/functions.js"></script>
 <script src="/static/js/smooth-scroll.js"></script>
 
@@ -57,7 +58,18 @@
 	</div>
 
 	<div id="graph">
-		graph
+		
+<!--<button onclick="updatePitch(0);">sample</button>-->
+
+<div id="detector" class="vague">
+<div class="pitch"><span id="pitch">--</span>Hz</div>
+<div class="note"><span id="note">--</span></div>   
+<canvas id="output" width=300 height=42></canvas>
+<div id="detune"><span id="detune_amt">--</span><span id="flat">cents &#9837;</span><span id="sharp">cents &#9839;</span></div>
+</div>
+
+
+
 	</div>
 
 </div><!--container-->

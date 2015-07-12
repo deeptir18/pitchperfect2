@@ -13,6 +13,7 @@ function removeBounce() {
 // Begins recording audio
 function recordStart() {
 	changeButtons("record");
+	toggleLiveInput();
 }
 
 // Stops recording
